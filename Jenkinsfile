@@ -21,7 +21,7 @@ node('built-in') {
         sh 'git clone https://github.com/IlarionB/Infra.git'
         dir('/opt/tomcat/.jenkins/workspace/dsl-1/Infra'){
             sh 'git checkout dev'
-            sh 'cp Dockerfile /opt/tomcat/.jenkins/workspace/Module 5' 
+            sh 'cp Dockerfile /opt/tomcat/.jenkins/workspace/dsl-1' 
         }
         sh 'cp /opt/tomcat/.jenkins/workspace/dsl-1/target/hello-world-war-1.0.0.war /opt/tomcat/.jenkins/workspace/dsl-1/hello-world-war-1.0.0.war'
         sh 'docker build -t hello-world-war:$BUILD_ID .'
